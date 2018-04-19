@@ -104,7 +104,7 @@ function hello() {
 我们在项目中引入style.css文件
 执行以下命令：
 
-> npm run dev
+> webpack --mode development
 
 提示错误：
 
@@ -139,7 +139,7 @@ require('css-loader!./style.css') // 这就代表打包时使用css-loader处理
 
 我们在根目录新建index.html,并用script标签引入dist目录下的main.js用于查看效果,
 
-```javascript
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
