@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <!-- 将htmlWebapckPlugin实例化时的title注入到上面的占位符中 -->
+
+  <script type="text/javascript">
+    <%= compilation.assets[htmlWebpackPlugin.files.chunks.main.entry.substring(htmlWebpackPlugin.files.publicPath.length)].source() %>
+  </script>
+  <!-- 内联插入js -->
+</head>
+<body>
+
+  <% for (let k in htmlWebpackPlugin.files.chunks) { %>
+    <% if (k !== 'main') { %>
+    <script src="<%= htmlWebpackPlugin.files.chunks[k].entry %>"></script>
+    <% } %>
+  <% } %>
+
+</body>
+</html>
