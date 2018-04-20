@@ -212,7 +212,7 @@ require('style-loader!css-loader!./style.css')
 例如：
 
 > --progress 显示打包的过程
-> --display-reasons 显示模块打包的原因
+> --display-reason 显示模块打包的原因
 > --display-modules 显示打包的模块信息
 
 还有其他的参数我们可以通过命令:
