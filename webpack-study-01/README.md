@@ -25,7 +25,15 @@ function hello() {
 
 > wepback hello.js hello.bundle.js
 
-这行命令是将hello.js打包成另一个文件bundle.js. Unfortunately，4.x版本会提示：
+这行命令是将hello.js打包成另一个文件bundle.js,不幸的是
+:   提示webpack不是内部命令
+
+这时候我们在项目里安装webpack：
+
+> npm install webpack -D
+:   这里的-D参数其实就是--save-dev的简写，-D是将安装的依赖信息保存到package.json中的devDependencies 中.
+
+再次尝试打包,Unfortunately，4.x版本会提示：
 > The CLI moved into a separate package:webpack-cli.
 > Please install 'webpack-cli' in addition to webpack itself to use the CLI.
 > ->when using npm: npm install webpack-cli -D
@@ -43,8 +51,6 @@ function hello() {
 我们在项目中安装webpack-cli:
 
 > npm install webpack-cli -D
-
-这里的-D参数其实就是--save-dev的简写，-D是将安装的依赖信息保存到package.json中的devDependencies 中.
 
 
 ## 5. 设置模式
