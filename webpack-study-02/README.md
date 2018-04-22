@@ -137,8 +137,8 @@ module.exports = {
         collapseWhitespace: true // 删除模板空格  还有很多参数可以按需配置
       
       },
-      //chunks: ['main', 'a'], // 当你需要打包生成多个js文件时，该选项就可以决定是否都引入这些生成的js 这里的['main', 'a'] 就是entry中键值 
-      我们执行打包时生成的html文件中只会引入index.js 和 a.js
+      //chunks: ['main', 'a'], // 当你需要打包生成多个js文件时，该选项就可以决定是否都引入打包生成的js 这里的['main', 'a'] 就是entry中键值 
+      我们执行打包时生成的html文件中只会引入main.js 和 a.js
 
       excludeChunks: ['b'], // 这行配置就是与chunks截然相反 配置它就是不引入chunk 为b也就是entry中键名为b的文件 也就是b.js
     })
