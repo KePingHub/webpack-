@@ -1,0 +1,6 @@
+@import './a.css';
+
+html, body {
+  background-color: aqua;
+  display: flex;
+}
