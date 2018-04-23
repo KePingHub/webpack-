@@ -182,7 +182,7 @@ module.exports = {
         test: /\.less$/,
         use: [
           'style-loader',
-          'css-loader', // 为何这里不加options: { importLoaders: 1 } 是因为less已经将@import的内容已经处理了，所以当postcss-loader处理的时候也就没有@import
+          { loader: 'css-loader', options: { importLoaders: 1 } },
           // 'postcss-loader', // 默认postcss-loader默认会载入根目录下的postcss.config.js文件的配置
           {
             loader: 'postcss-loader',

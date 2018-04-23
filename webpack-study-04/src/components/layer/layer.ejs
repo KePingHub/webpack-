@@ -1,0 +1,10 @@
+<div>
+    <!--<img src="../../assets/bg.jpg" alt="">-->
+    <!--路径不会被替换-->
+
+    <img src="${require('../../assets/bg.jpg')}" alt="">
+    <span><%= layer.msg %></span>
+    <% for (let key in layer) { %>
+        <%= key %> : <%= JSON.stringify(layer[key]) %>
+    <% } %>
+</div>

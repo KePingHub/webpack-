@@ -1,0 +1,6 @@
+@import './layer2.css';
+
+html {
+  background-color: aqua;
+  display: flex;
+}
